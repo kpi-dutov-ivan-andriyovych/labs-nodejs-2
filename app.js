@@ -1,7 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import path from "path";
-import MEMBERS from "./data/members.json" with { type: "json" };
+import FAQ from "./data/faq.json" with { type: "json" };
 
 const app = express();
 
@@ -10,6 +10,13 @@ app.use(express.static("public"));
 
 app.set("view engine", "ejs");
 app.set("views", path.join(import.meta.dirname, "views"));
+
+app.get("/faq", (req, res) => {
+  const data = {
+    faq: FAQ,
+  };
+  res.render("faq", data);
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
