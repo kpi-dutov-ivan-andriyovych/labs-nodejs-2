@@ -18,6 +18,10 @@ app.get("/faq", (req, res) => {
   res.render("faq", data);
 });
 
+app.use((req, res) => {
+  res.status(404).render("404");
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
