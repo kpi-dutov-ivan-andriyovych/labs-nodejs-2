@@ -1,2 +1,29 @@
-<!-- This file is for rendering the dynamic team page -->
-<!-- please use <%#- include('partials/nav') %> (without the # symbol)!!! (c) spnchdev, March 5, 2026 -->
+<%- include('partials/header') %> <%- include('partials/nav') %>
+
+<main>
+    <h1 style="margin: 2rem 0;">Склад Бригади №5</h1>
+
+    <div class="member-grid">
+        <% students.forEach(student => { %>
+            <div class="member-card">
+                <img src="<%= student.avatar %>" alt="Avatar" class="member-avatar">
+                
+                <h3 class="member-name"><%= student.name %></h3>
+                <p class="member-role"><%= student.role %></p>
+                
+                <div style="margin-top: 15px;">
+                    <a href="/student/<%= student.id %>" style="color: var(--accent); text-decoration: none; font-family: 'Geist Mono', monospace;">
+                        [ view profile ]
+                    </a>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</main>
+
+<footer>
+    <hr style="border-color: var(--border); margin: 3rem 0;">
+    <p>Репозиторій проекту: <a href="https://github.com/kpi-dutov-ivan-andriyovych/labs-nodejs-2" target="_blank" style="color: var(--accent);">GitHub</a></p>
+</footer>
+
+<%- include('partials/footer') %>
