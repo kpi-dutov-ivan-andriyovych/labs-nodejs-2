@@ -2,6 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import path from "path";
 import FAQ from "./data/faq.json" with { type: "json" };
+import students from "./data/members.json" with { type: "json" };
 
 const app = express();
 
@@ -22,10 +23,18 @@ app.get('/faq', (req, res) => {
 });
 
 app.get('/team', (req, res) => {
-  const students = [
-    { name: 'string', avatar: 'link', role: 'string' },
-  ];
   res.render('team',{ page: 'team', students });
+});
+
+app.get('/student/:id', (req, res) => {
+  const id = Number(req.params.id);
+  const student = students.find(student => student.id === id);
+
+  if (!student) {
+    return res.status(404).render('404');
+  }
+
+  res.render('member', { page: 'team', student });
 });
 
 app.use((req, res) => {
