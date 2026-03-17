@@ -1,7 +1,17 @@
-<%- include('partials/header') %> <%- include('partials/nav') %>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Склад Бригади №5</title>
+    <link rel="stylesheet" href="/css/team.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+
+<%- include('partials/nav') %>
 
 <main>
-    <h1 style="margin: 2rem 0;">Склад Бригади №5</h1>
+    <h1 class="team-title">Склад Бригади №5</h1>
 
     <div class="member-grid">
         <% students.forEach(student => { %>
@@ -11,8 +21,8 @@
                 <h3 class="member-name"><%= student.name %></h3>
                 <p class="member-role"><%= student.role %></p>
                 
-                <div style="margin-top: 15px;">
-                    <a href="/student/<%= student.id %>" style="color: var(--accent); text-decoration: none; font-family: 'Geist Mono', monospace;">
+                <div class="member-action">
+                    <a href="/student/<%= student.id %>" class="profile-link">
                         [ view profile ]
                     </a>
                 </div>
@@ -22,8 +32,9 @@
 </main>
 
 <footer>
-    <hr style="border-color: var(--border); margin: 3rem 0;">
-    <p>Репозиторій проекту: <a href="https://github.com/kpi-dutov-ivan-andriyovych/labs-nodejs-2" target="_blank" style="color: var(--accent);">GitHub</a></p>
+    <hr class="footer-divider">
+    <p class="footer-text">Репозиторій проекту: <a href="https://github.com/kpi-dutov-ivan-andriyovych/labs-nodejs-2" target="_blank" class="footer-link">GitHub</a></p>
 </footer>
 
-<%- include('partials/footer') %>
+</body>
+</html>
