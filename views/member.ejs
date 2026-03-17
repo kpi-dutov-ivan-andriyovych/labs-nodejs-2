@@ -1,2 +1,39 @@
 <!-- This file is for rendering the dynamic member page -->
 <!-- please use <%#- include('partials/nav') %> (without the # symbol)!!! (c) spnchdev, March 5, 2026 -->
+ <!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/member.css">
+</head>
+<body>
+<%- include('partials/nav') %>
+<main>
+    <div class="member-card">
+
+        <img 
+            src="<%= student.avatar %>" 
+            alt="<%= student.name %>" 
+            class="member-avatar"
+        >
+
+        <h1 class="member-name"><%= student.name %></h1>
+
+        <p class="member-role">✨ <%= student.role %></p>
+
+        <hr> <div class="member-stats">
+            <p><strong>🔋 Status:</strong> <%= student.status %></p>
+            <p><strong>☕ Morning coffee:</strong> <%= student.morningCoffeeConsumption %></p>
+            <p><strong>🐾 Spirit animal:</strong> <%= student.spiritAnimal %></p>
+            <p><strong>🛡️ Survivability:</strong> <%= student.survivabilityRate %></p>
+            <p><strong>📚 Library visits:</strong> <%= student.lastSeenInLibrary %></p>
+            <p><strong>🎲 D&D alignment:</strong> <%= student.dndRealLifeAlignment %></p>
+        </div>
+
+        <hr>
+    </div>
+    <a href="/team">Назад до команди</a>
+</main>
+</body>
+</html>

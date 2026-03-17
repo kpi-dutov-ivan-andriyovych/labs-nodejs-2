@@ -1,1 +1,80 @@
-[{ "id": 1 }]
+[
+  {
+    "id": 1,
+    "group": "ІП-43",
+    "name": "Дутов Іван Андрійович",
+    "avatar": "/img/1_student.jpg",
+    "role": "Chief Prompt Engineer",
+    "morningCoffeeConsumption": "Runs purely on Red Bull",
+    "status": "Debugging CSS for 5 hours straight",
+    "spiritAnimal": "Panicking Raccoon",
+    "survivabilityRate": "99% (if no math is involved)",
+    "lastSeenInLibrary": "Never",
+    "dndRealLifeAlignment": "Chaotic Neutral"
+  },
+  {
+    "id": 2,
+    "group": "ІП-44",
+    "name": "Кулагін Дмитро Олександрович",
+    "avatar": "/img/2_student.jpg",
+    "role": "Lord of the Databases",
+    "morningCoffeeConsumption": "3 cups of double espresso",
+    "status": "Searching for the meaning of life",
+    "spiritAnimal": "Owl on Red Bull",
+    "survivabilityRate": "50/50",
+    "lastSeenInLibrary": "B.C. (Before Covid)",
+    "dndRealLifeAlignment": "True Neutral (just wants to sleep)"
+  },
+  {
+    "id": 3,
+    "group": "ІП-41",
+    "name": "Костенко Крістіна Віталіївна",
+    "avatar": "/img/3_student.jpg",
+    "role": "Frontend Mage",
+    "morningCoffeeConsumption": "0 (Psychopath)",
+    "status": "Waiting for expulsion",
+    "spiritAnimal": "Optimistic Sloth",
+    "survivabilityRate": "12%",
+    "lastSeenInLibrary": "Got lost there in 2021",
+    "dndRealLifeAlignment": "Lawful Good"
+  },
+  {
+    "id": 4,
+    "group": "ІП-42",
+    "name": "Кукалєв Денис Дмитрович",
+    "avatar": "/img/4_student.jpg",
+    "role": "Useful",
+    "morningCoffeeConsumption": "Decaf only",
+    "status": "Pretending to work",
+    "spiritAnimal": "Greater Capybara",
+    "survivabilityRate": "40%",
+    "lastSeenInLibrary": "134 (was sheltering from rain)",
+    "dndRealLifeAlignment": "Chaotic Evil"
+  },
+  {
+    "id": 5,
+    "group": "ІП-45",
+    "name": "Янов Богдан Євгенійович",
+    "avatar": "/img/5_student.jpg",
+    "role": "Backend Ninja",
+    "morningCoffeeConsumption": "Intravenous coffee drip",
+    "status": "Writing another microservice",
+    "spiritAnimal": "Caffeine-driven Lemur",
+    "survivabilityRate": "85%",
+    "lastSeenInLibrary": "During the first week of freshmen year",
+    "dndRealLifeAlignment": "Lawful Evil"
+  },
+  {
+    "id": 6,
+    "group": "ІП-45",
+    "name": "Голяк Олександр Юрійович",
+    "avatar": "/img/6_student.jpg",
+    "role": "Fullstack Wizard",
+    "morningCoffeeConsumption": "Green tea enthusiast",
+    "status": "Fixing merge conflicts",
+    "spiritAnimal": "Zen Master Turtle",
+    "survivabilityRate": "100% (already dead inside)",
+    "lastSeenInLibrary": "Lives there",
+    "dndRealLifeAlignment": "Neutral Good"
+  }
+]
