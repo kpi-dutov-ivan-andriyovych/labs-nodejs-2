@@ -1,0 +1,13 @@
+<section class="faq-accordion" aria-label="FAQ">
+    <% items.forEach((item, index) => { %>
+        <details class="faq-item" <% if (index === 0) { %>open<% } %>>
+            <summary class="faq-question">
+                <span class="faq-question-text"><%= item.question %></span>
+                <span class="faq-question-icon" aria-hidden="true">▾</span>
+            </summary>
+            <div class="faq-answer">
+                <p><%= item.answer %></p>
+            </div>
+        </details>
+    <% }); %>
+</section>

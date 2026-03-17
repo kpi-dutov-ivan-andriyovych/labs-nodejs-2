@@ -1,0 +1,69 @@
+:root {
+  --faq-bg: rgba(255, 255, 255, 0.04);
+  --faq-border: rgba(255, 255, 255, 0.12);
+  --faq-contrast: rgba(255, 255, 255, 0.85);
+}
+
+.faq-accordion {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.faq-item {
+  border: 1px solid var(--faq-border);
+  border-radius: 12px;
+  background: var(--faq-bg);
+  overflow: hidden;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--accent);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--accent);
+  list-style: none;
+}
+
+.faq-question-text {
+  flex: 1;
+}
+
+.faq-question-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  transition: transform 0.25s ease;
+}
+
+.faq-item[open] .faq-question-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 1rem 1rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Remove default disclosure triangle in Firefox */
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+/* Add some spacing for the first item if it starts open */
+.faq-item[open] .faq-answer {
+  padding-top: 0.25rem;
+}
