@@ -29,14 +29,16 @@ app.get("/student/:id", (req, res) => {
   const student = students.find((student) => student.id === id);
 
   if (!student) {
-    return res.status(404).render("404");
+    return res
+      .status(404)
+      .sendFile(path.join(import.meta.dirname, "public/404.html"));
   }
 
   res.render("member", { page: "team", student });
 });
 
 app.use((req, res) => {
-  res.status(404).render("404");
+  res.status(404).sendFile(path.join(import.meta.dirname, "public/404.html"));
 });
 
 const PORT = process.env.PORT || 3000;
